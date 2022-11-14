@@ -3,7 +3,7 @@
   <title>Space Invaders</title>
   <link href='https://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
 </head>
-<styles>
+<style>
 body, html{
   background-color: #222;
   width: 100%;
@@ -25,8 +25,12 @@ canvas {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: optimize-contrast
 }
-</styles>
+</style>
 <body>
+  <h2>Controls:</h2>
+  <h4>Left: A</h4>
+  <h4>Right: D</h4>
+  <h4>Shoot: ENTER</h4>
   <canvas id="game-canvas" width="640" height="640"></canvas>
 </body>
 <script>
@@ -115,9 +119,9 @@ var IS_CHROME = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigato
 var CANVAS_WIDTH = 640;
 var CANVAS_HEIGHT = 640;
 var SPRITE_SHEET_SRC = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAEACAYAAAADRnAGAAACGUlEQVR42u3aSQ7CMBAEQIsn8P+/hiviAAK8zFIt5QbELiTHmfEYE3L9mZE9AAAAqAVwBQ8AAAD6THY5CgAAAKbfbPX3AQAAYBEEAADAuZrC6UUyfMEEAIBiAN8OePXnAQAAsLcmmKFPAQAAgHMbm+gbr3Sdo/LtcAAAANR6GywPAgBAM4D2JXAAABoBzBjA7AmlOx8AAEAzAOcDAADovTc4vQim6wUCABAYQG8QAADd4dPd2fRVYQAAANQG0B4HAABAawDnAwAA6AXgfAAAALpA2uMAAABwPgAAgPoAM9Ci/R4AAAD2dmqcEQIAIC/AiQGuAAYAAECcRS/a/cJXkUf2AAAAoBaA3iAAALrD+gIAAADY9baX/nwAAADNADwFAADo9YK0e5FMX/UFACA5QPSNEAAAAHKtCekmDAAAAADvBljtfgAAAGgMMGOrunvCy2uCAAAACFU6BwAAwF6AGQPa/XsAAADYB+B8AAAAtU+ItD4OAwAAAFVhAACaA0T7B44/BQAAANALwGMQAAAAADYO8If2+P31AgAAQN0SWbhFDwCAZlXgaO1xAAAA1FngnA8AACAeQPSNEAAAAM4CnC64AAAA4GzN4N9NSfgKEAAAAACszO26X8/X6BYAAAD0Anid8KcLAAAAAAAAAJBnwNEvAAAA9Jns1ygAAAAAAAAAAAAAAAAAAABAQ4COCENERERERERERBrnAa1sJuUVr3rsAAAAAElFTkSuQmCC';
-var LEFT_KEY = 37;
-var RIGHT_KEY = 39;
-var SHOOT_KEY = 88;
+var LEFT_KEY = 65;
+var RIGHT_KEY = 68;
+var SHOOT_KEY = 13;
 var TEXT_BLINK_FREQ = 500;
 var PLAYER_CLIP_RECT = { x: 0, y: 204, w: 62, h: 32 };
 var ALIEN_BOTTOM_ROW = [ { x: 0, y: 0, w: 51, h: 34 }, { x: 0, y: 102, w: 51, h: 34 }];
