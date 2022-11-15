@@ -211,7 +211,7 @@ var updateAlienLogic = false;
 var alienDirection = -1;
 var alienYDown = 0;
 var alienCount = 0;
-var wave = 1;
+var wave = 2;
 var hasGameStarted = false;
 
 
@@ -310,10 +310,7 @@ var Player = SheetSprite.extend({
       }
     }
     if (wasKeyPressed(MENU_KEY))
-      function drawStartScreen() {
-  	fillCenteredText("Space Invaders", CANVAS_WIDTH/2, CANVAS_HEIGHT/2.75, '#FFFFFF', 36);
-  	fillBlinkingText("Press enter to play!", CANVAS_WIDTH/2, CANVAS_HEIGHT/2, 500, '#FFFFFF', 36);
-      }
+      reload()
   },
   
   updateBullets: function(dt) {
@@ -522,7 +519,7 @@ function initCanvas() {
 
 function preDrawImages() {
   var canvas = drawIntoCanvas(2, 8, function(ctx) {
-      ctx.fillStyle = 'white';
+      ctx.fillStyle = 'red';
       ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     });
     bulletImg = new Image();
