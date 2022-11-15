@@ -122,6 +122,7 @@ var SPRITE_SHEET_SRC = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAEACA
 var LEFT_KEY = 65;
 var RIGHT_KEY = 68;
 var SHOOT_KEY = 13;
+var MENU_KEY = 27;
 var TEXT_BLINK_FREQ = 500;
 var PLAYER_CLIP_RECT = { x: 0, y: 204, w: 62, h: 32 };
 var ALIEN_BOTTOM_ROW = [ { x: 0, y: 0, w: 51, h: 34 }, { x: 0, y: 102, w: 51, h: 34 }];
@@ -307,6 +308,11 @@ var Player = SheetSprite.extend({
         this.bulletDelayAccumulator = 0;
       }
     }
+    if (wasKeyPressed(MENU_KEY))
+      function drawStartScreen() {
+  	fillCenteredText("Space Invaders", CANVAS_WIDTH/2, CANVAS_HEIGHT/2.75, '#FFFFFF', 36);
+  	fillBlinkingText("Press enter to play!", CANVAS_WIDTH/2, CANVAS_HEIGHT/2, 500, '#FFFFFF', 36);
+      }
   },
   
   updateBullets: function(dt) {
